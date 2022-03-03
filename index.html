@@ -16,25 +16,56 @@
 <style>
     .t {
         width: 60%;
-        margin:auto;
+        margin: auto;
     }
-    th{
+
+    th {
         width: 100px;
         border-right: 2px solid lightgray;
     }
-    .c{
+
+    .c {
         padding-left: 10px;
     }
+
     span {
         display: inline-block;
         width: 200px;
     }
 </style>
 
+<script>
+    function search() {
+        var a = "https://www.baidu.com/s?wd=" + $("#search").val();
+        window.location.href = a;
+    };
+    $(".btn").keydown(function (e) {
+                switch (e.keyCode) {
+                    case 13:
+                        search();
+                        break;
+                    default:
+                        break;
+                }
+            });
+</script>
+
 <body>
-    <ul class="nav nav-tabs">
-        <li>天尊杨戬的导航站</li>
-    </ul>
+    <div style="text-align: center;">
+        <div>
+            <img src="/data/center.jpg" class="img-circle" style="width: 200px;">
+            <span style="font-size: 50px;font-family:'Lisu';">天尊杨戬</span>
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." id="search"><!--style="width: 600px;height: 50px;"-->
+            <span class="input-group-btn">
+                <button class="btn btn-default" onclick="search()">搜索</button>
+            </span>
+        </div>
+    </div>
+
+
+
     <div class="t">
         <table class="table">
             <tr>
