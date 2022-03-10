@@ -14,20 +14,23 @@
     integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
 </script>
 <style>
-    body{
+    body {
         background-image: url("data/bg.jpg");
     }
-    a{
+
+    a {
         color: #9C93C6;
     }
-    .icon{
-        width: 15px;
-        height: 15px;
+
+    .icon {
+        width: 16px;
+        height: 16px;
     }
+
     .t {
-        width: 60%;
+        width: 75%;
         margin: auto;
-        text-align:start;
+        text-align: start;
     }
 
     th {
@@ -41,6 +44,7 @@
 
     span {
         display: inline-block;
+        font-size: 15px;
         width: 200px;
         height: 10px;
     }
@@ -52,24 +56,25 @@
         window.location.href = a;
     };
     $(".btn").keydown(function (e) {
-                switch (e.keyCode) {
-                    case 13:
-                        search();
-                        break;
-                    default:
-                        break;
-                }
-            });
+        switch (e.keyCode) {
+            case 13:
+                search();
+                break;
+            default:
+                break;
+        }
+    });
 </script>
 
 <body>
     <div style="text-align: center;">
         <div>
             <img src="data/center.jpg" class="img-circle" style="width: 200px;">
-            <span style="font-size: 50px;font-family:'Lisu';">天尊杨戬</span>
+            <div style="font-size: 60px;font-family:'Lisu';">天尊杨戬</div>
         </div>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for..." id="search"><!--style="width: 600px;height: 50px;"-->
+            <input type="text" class="form-control" placeholder="Search for..." id="search">
+            <!--style="width: 600px;height: 50px;"-->
             <span class="input-group-btn">
                 <button class="btn btn-default" onclick="search()">搜索</button>
             </span>
@@ -84,8 +89,18 @@
                 <th>PDF阅读器：</th>
                 <td>
                     <div class="c">
-                        <span><a>福昕阅读器</a></span>
-                        <span><a>SumatraPDF</a></span>
+                        <span>
+                            <a href="https://www.foxitsoftware.cn/">
+                                <img class="icon" src="https://static.icecreamapps.com/images/favicon/favicon.ico">
+                                福昕阅读器
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.sumatrapdfreader.org/free-pdf-reader">
+                                <img src="#">
+                                SumatraPDF
+                            </a>
+                        </span>
                     </div>
                 </td>
             </tr>
@@ -93,9 +108,25 @@
                 <th>PDF编辑器：</th>
                 <td>
                     <div class="c">
-                        <span><img class="icon" src="https://static.icecreamapps.com/images/favicon/favicon.ico"><a href="https://icecreamapps.com/PDF-Editor/">Icecream PDF Editor</a></span>
-                        <span><img class="icon" src="https://www.foxitsoftware.cn/themes/simpleboot3/public/assets/images/favicon.ico"><a href="https://www.foxitsoftware.cn/">福昕PDF编辑器</a></span>
-                        <span><img class="icon" src="https://static.icecreamapps.com/images/favicon/favicon.ico"><a href="https://icecreamapps.com/PDF-Editor/">万兴PDF专家</a></span>
+                        <span>
+                            <a href="https://icecreamapps.com/PDF-Editor/">
+                                <img class="icon" src="https://static.icecreamapps.com/images/favicon/favicon.ico">
+                                Icecream PDF Editor
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.foxitsoftware.cn/">
+                                <img class="icon"
+                                    src="https://www.foxitsoftware.cn/themes/simpleboot3/public/assets/images/favicon.ico">
+                                福昕PDF编辑器
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://icecreamapps.com/PDF-Editor/">
+                                <img class="icon" src="https://static.icecreamapps.com/images/favicon/favicon.ico">
+                                万兴PDF专家
+                            </a>
+                        </span>
                     </div>
                 </td>
             </tr>
@@ -103,11 +134,38 @@
                 <th>江苏大学</th>
                 <td>
                     <div class="c">
-                        <span><img class="icon" src="http://ehall.ujs.edu.cn/new/portal/images/icons/portal.ico"><a href="http://ehall.ujs.edu.cn/new/index.html"></a><a href="https://webvpn.ujs.edu.cn/login">江苏大学VPN</a></span>
-                        <span><img class="icon" src="http://ehall.ujs.edu.cn/new/portal/images/icons/portal.ico"><a href="http://ehall.ujs.edu.cn/new/index.html"><a href="https://www.ujs.edu.cn/">江苏大学官网</a></span>
-                        <span><img class="icon" src="http://ehall.ujs.edu.cn/new/portal/images/icons/portal.ico"><a href="http://ehall.ujs.edu.cn/new/index.html">江苏大学综合服务门户</a></span>
-                        <span><img class="icon" src="http://ehall.ujs.edu.cn/new/portal/images/icons/portal.ico"><a href="http://ehall.ujs.edu.cn/new/index.html"></a><a href="http://ujs.chaoxing.com/portal">江苏大学网络教学平台</a></span>
-                        <span><img class="icon" src="https://edu-image.nosdn.127.net/32a8dd2a-b9aa-4ec9-abd5-66cd8751befb.png?imageView&quality=100"><a href="https://www.icourse163.org/">MOOC平台</a></span>
+                        <span>
+                            <a href="https://webvpn.ujs.edu.cn/login">
+                                <img class="icon" src="http://ehall.ujs.edu.cn/new/portal/images/icons/portal.ico">
+                                江苏大学VPN
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.ujs.edu.cn/">
+                                <img class="icon" src="http://ehall.ujs.edu.cn/new/portal/images/icons/portal.ico">
+                                江苏大学官网
+                            </a>
+                        </span>
+                        <span>
+                            <a href="http://ehall.ujs.edu.cn/new/index.html">
+                                <img class="icon" src="http://ehall.ujs.edu.cn/new/portal/images/icons/portal.ico">
+                                江苏大学综合服务门户
+                            </a>
+                        </span>
+                        <span>
+
+                            <a href="http://ujs.chaoxing.com/portal">
+                                <img class="icon" src="http://ehall.ujs.edu.cn/new/portal/images/icons/portal.ico">
+                                江苏大学网络教学平台
+                            </a>
+                        </span>
+                        <span>
+                            <img class="icon"
+                                src="https://edu-image.nosdn.127.net/32a8dd2a-b9aa-4ec9-abd5-66cd8751befb.png?imageView&quality=100"><a
+                                href="https://www.icourse163.org/">
+                                MOOC平台
+                            </a>
+                        </span>
                     </div>
                 </td>
             </tr>
@@ -115,20 +173,119 @@
                 <th>影视娱乐</th>
                 <td>
                     <div class="c">
-                        <span><a href="http://www.imomoe.live/">樱花动漫</a></span>
-                        <span><img class="icon" src="https://www.bilibili.com/favicon.ico?v=1"><a href="https://www.bilibili.com/">哔哩哔哩</a></span>
-                        <span><img class="icon" src="https://img.5020.work/img/favicon.png"><a href="http://7080.wang/">7080影视</a></span>
-                        <span><img class="icon" src="https://www.mvyxws.com/images/logo_01.png"><a href="https://www.mvyxws.com">医学微视</a></span>
-                        <span><a href="http://halihali1.com/">哈哩哈哩</a></span>
-                        <span><img class="icon" src="https://pixabay.com/apple-touch-icon.png"><a href="https://pixabay.com/">pixabay</a></span>
-                        <span><img class="icon" src="https://img1.yiwugou.com/link2pic2/images/yiwugou/www/images/favicon.ico"><a href="https://www.yiwugo.com/">义乌购</a></span>
-                        <span><img class="icon" src="https://mikanani.me/images/favicon.ico?v=2"><a href="https://mikanani.me/">蜜柑计划</a></span>
-                        <span><img class="icon" src="https://loli.magedn.com/wp-content/uploads/2021/08/61207828517f39.ico"><a href="https://loli.magedn.com/">magedn</a></span>
-                        <span><img class="icon" src="https://www.pptsupermarket.com/assets/logo.png"><a href="https://www.pptsupermarket.com/">ppt超级市场</a></span>
+                        <span>
+                            <a href="http://www.imomoe.live/">
+                                <img class="icon" src="#">
+                                樱花动漫
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.bilibili.com/">
+                                <img class="icon" src="https://www.bilibili.com/favicon.ico?v=1">
+                                哔哩哔哩
+                            </a>
+                        </span>
+                        <span>
+                            <a href="http://7080.wang/">
+                                <img class="icon" src="https://img.5020.work/img/favicon.png">
+                                7080影视
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.mvyxws.com">
+                                <img class="icon" src="https://www.mvyxws.com/images/logo_01.png">
+                                医学微视
+                            </a>
+                        </span>
+                        <span>
+                            <a href="http://halihali1.com/">
+                                <img class="icon" src="#">
+                                哈哩哈哩
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://pixabay.com/">
+                                <img class="icon" src="https://pixabay.com/apple-touch-icon.png">
+                                pixabay
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.yiwugo.com/">
+                                <img class="icon"
+                                    src="https://img1.yiwugou.com/link2pic2/images/yiwugou/www/images/favicon.ico">
+                                义乌购
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://mikanani.me/">
+                                <img class="icon" src="https://mikanani.me/images/favicon.ico?v=2">
+                                蜜柑计划
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://loli.magedn.com/">
+                                <img class="icon"
+                                    src="https://loli.magedn.com/wp-content/uploads/2021/08/61207828517f39.ico">
+                                magedn
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.pptsupermarket.com/">
+                                <img class="icon" src="https://www.pptsupermarket.com/assets/logo.png">
+                                ppt超级市场
+                            </a>
+                        </span>
+                        <span>
+                            <a href="http://pewpewpew.work/">
+                                <img class="icon" src="#">
+                                枪炮世界
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.runoob.com/">
+                                <img class="icon" src="https://static.runoob.com/images/favicon.ico">
+                                菜鸟教程
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.oracle.com/index.html">
+                                <img class="icon" src="https://www.oracle.com/favicon.ico">
+                                ORACLE
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://how2j.cn/">
+                                <img class="icon" src="https://how2j.cn/img/site/favicon.ico">
+                                How2J
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://alphacoders.com/">
+                                <img class="icon" src="https://static.alphacoders.com/icons/favicon-32x32.png">
+                                alphacoders
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://zhutix.com/">
+                                <img class="icon" src="https://dl.zhutix.net/2020/05/logo.svg">
+                                zhutix
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.piqsels.com/zh">
+                                <img class="icon" src="https://www.piqsels.com/public/css/favicon.ico">
+                                piqsels
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://wallhaven.cc/">
+                                <img class="icon" src="https://wallhaven.cc/favicon.ico">
+                                wallhaven
+                            </a>
+                        </span>
                     </div>
                 </td>
             </tr>
-
         </table>
     </div>
 </body>
