@@ -7,15 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>导航站</title>
 </head>
+
+<!--bootstrap-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
     integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
 </script>
+
+<!--vue-->
+<script src="https://how2j.cn/study/vue.min.js"></script>
 <style>
     body {
-        background-image: url("data/bg.jpg");
+        background-image: url("data/picture/bg.jpg");
     }
 
     a {
@@ -36,9 +41,9 @@
     th {
         width: 120px;
         border-right: 2px solid lightgray;
-        font-size:18px;
+        font-size: 18px;
         font-family: 'Lisu';
-        color:#574685 ;
+        color: #574685;
     }
 
     .c {
@@ -58,25 +63,16 @@
         var a = "https://www.baidu.com/s?wd=" + $("#search").val();
         window.location.href = a;
     };
-    $(".btn").keydown(function (e) {
-        switch (e.keyCode) {
-            case 13:
-                search();
-                break;
-            default:
-                break;
-        }
-    });
 </script>
 
 <body>
     <div style="text-align: center;">
         <div>
-            <img src="data/center.jpg" class="img-circle" style="width: 200px;">
+            <img src="data/picture/center.jpg" class="img-circle" style="width: 200px;">
             <div style="font-size: 60px;font-family:'Lisu';">天尊杨戬</div>
         </div>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for..." id="search">
+            <input type="text" class="form-control" placeholder="Search for..." id="search" @keyup.enter="search()">
             <!--style="width: 600px;height: 50px;"-->
             <span class="input-group-btn">
                 <button class="btn btn-default" onclick="search()">搜索</button>
@@ -96,6 +92,26 @@
                             <a href="https://www.foxitsoftware.cn/">
                                 <img class="icon" src="https://static.icecreamapps.com/images/favicon/favicon.ico">
                                 福昕阅读器
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.fxsound.com/">
+                                <img class="icon"
+                                    src="https://global-uploads.webflow.com/5d9ee27d931ebcfda8f814d3/5f63ded9b9dd5a595320fc01_256.png">
+                                FXSound
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.arduino.cn/">
+                                <img class="icon"
+                                    src="https://www.arduino.cn/data/attachment/common/6c/common_45_icon.jpg">
+                                arduino
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://studiolab.sagemaker.aws/">
+                                <img class="icon" src="https://studiolab.sagemaker.aws/favicon.ico">
+                                SageMaker.Studio lab
                             </a>
                         </span>
                         <span>
@@ -291,6 +307,21 @@
             </tr>
         </table>
     </div>
+    <script>
+        new Vue({
+            el: "#search",
+            data: '',
+            methods: {
+                search: function () {
+                    var a = "https://www.baidu.com/s?wd=" + $("#search").val();
+                    window.location.href = a;
+                }
+            },
+            mounted() {
+                document.getElementById('search').focus()
+            }
+        })
+    </script>
 </body>
 
 </html>
